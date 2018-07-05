@@ -1,3 +1,5 @@
+#include <string.h>
+
 typedef enum
 {
 	INT,
@@ -23,4 +25,16 @@ typedef struct
 
 	value_type type;
 	json_value value; 
+
+	char* name;
 } JSONelmnt;
+
+JSONelmnt* parseJSON(char*)
+{
+	JSONelmnt* first;	
+	first = (JSONelmnt*) malloc(sizeof(JSONelmnt));
+
+	
+
+	return first;
+}
