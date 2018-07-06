@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 typedef enum
 {
@@ -19,22 +20,25 @@ typedef union
 
 typedef struct
 {
-	JSONelmnt* next;
-	JSONelmnt* prev;
-	JSONelmnt* child;
+	JSON_elmnt* next;
+	JSON_elmnt* prev;
+	JSON_elmnt* child;
 
 	value_type type;
 	json_value value; 
 
 	char* name;
-} JSONelmnt;
+} JSON_elmnt;
 
-JSONelmnt* parseJSON(char*)
+JSON_elmnt* parse_JSON(char* JSON_string)
 {
-	JSONelmnt* first;	
-	first = (JSONelmnt*) malloc(sizeof(JSONelmnt));
 
-	
+	char* it = JSON_string;
 
-	return first;
+	while(it != '/0')
+	{
+		printf("%c", &it);
+	}
+
+	return NULL;
 }
